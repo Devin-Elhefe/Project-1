@@ -3,7 +3,11 @@ console.log("Slot machine game");
 /*-------------------------------- Constants --------------------------------*/
 let balance = 100;
 let betAmount = 10;
-const symbols = ['1', '2', '3'];
+const symbols = [
+    'assets/Burger.png',
+    'assets/Hotdog.png',
+    'assets/Pizza.png'
+];
 
 
 /*-------------------------------- Functions --------------------------------*/
@@ -13,6 +17,7 @@ function spinReels() {
         let reel1 = getRandomSymbol();
         let reel2 = getRandomSymbol();
         let reel3 = getRandomSymbol();
+        // console.log(reel1, reel2, reel3);
         displayReels(reel1, reel2, reel3);
         checkWin(reel1, reel2, reel3);
     } else {
@@ -26,7 +31,7 @@ function getRandomSymbol() {
 }
 
 function checkWin(reel1, reel2, reel3) {
-    if (reel1 === reel3 && reel2 === reel3) {
+    if (reel1 === reel2 && reel2 === reel3) {
     let jackpot = betAmount * 10;
     balance += jackpot;
     displayMessage('Jackpot! You Won ' + jackpot + 'credits!');
@@ -52,9 +57,9 @@ function updateBalanceDisplay() {
 }
 
 function clearReels() {
-    document.getElementById('reel1').textContent = '1';
-    document.getElementById('reel2').textContent = '2';
-    document.getElementById('reel3').textContent = '3';
+    document.getElementById('reel1').src = 'assets/Burger.png';
+    document.getElementById('reel2').src = 'assets/Hotdog.png';
+    document.getElementById('reel3').src = 'assets/Pizza.png';
 }
 
 function displayMessage(message) {
@@ -64,9 +69,9 @@ function displayMessage(message) {
 /*------------------------ Cached Element References ------------------------*/
 
 function displayReels(reel1, reel2, reel3) {
-    document.getElementById('reel1').textContent = reel1;
-    document.getElementById('reel2').textContent = reel2;
-    document.getElementById('reel3').textContent = reel3;
+    document.getElementById('reel1').src = reel1;
+    document.getElementById('reel2').src = reel2;
+    document.getElementById('reel3').src = reel3;
 }
 
 /*----------------------------- Event Listeners -----------------------------*/
