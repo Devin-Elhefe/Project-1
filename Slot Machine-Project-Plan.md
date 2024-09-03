@@ -38,3 +38,6 @@
 * **Sound Effects**: Add sound effects for spinning and winning. (*It would be cool but sounds like it would be tough to do*)
 * **Bonus Features**: Include bonus rounds, multipliers, or other features to add depth to the game.
 * **Pull Button**: Resembles the stick you pull on a real slot machine. So you would have the option to pull/click the stick or hit the spin button.
+
+[Live Game](https://devin-elhefe.github.io/Project-1/)
+
